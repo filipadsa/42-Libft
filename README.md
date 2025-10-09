@@ -1,4 +1,3 @@
-
  ___        ___   ________   ________  _________   
 |\  \      |\  \ |\   __  \ |\  _____\|\___   ___\ 
 \ \  \     \ \  \\ \  \|\ /_\ \  \__/ \|___ \  \_| 
@@ -53,6 +52,7 @@ typedef struct s_list
     void            *content;
     struct s_list   *next;
 } t_list;
+``
 
 List manipulation functions include:
 
