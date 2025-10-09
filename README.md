@@ -1,2 +1,2 @@
 # Libft
-My ery first own library
+My very first own library
