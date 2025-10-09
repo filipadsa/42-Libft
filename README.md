@@ -1,27 +1,19 @@
- ___        ___   ________   ________  _________   
-|\  \      |\  \ |\   __  \ |\  _____\|\___   ___\ 
-\ \  \     \ \  \\ \  \|\ /_\ \  \__/ \|___ \  \_| 
- \ \  \     \ \  \\ \   __  \\ \   __\     \ \  \  
-  \ \  \____ \ \  \\ \  \|\  \\ \  \_|      \ \  \ 
-   \ \_______\\ \__\\ \_______\\ \__\        \ \__\
-    \|_______| \|__| \|_______| \|__|         \|__|
-
-My very first C library
-
+  _ _ _      __ _   
+ | (_) |    / _| |  
+ | |_| |__ | |_| |_ 
+ | | | '_ \|  _| __|
+ | | | |_) | | | |_ 
+ |_|_|_.__/|_|  \__|
 
 # 🧩 Libft
 
 My very first C library — reimplementing and extending standard libc functions.
 Developed as part of the **42** curriculum.
 
----
-
 ## 🧠 Overview
 
 `libft` is a custom library written in C that reimplements essential functions from the standard C library (`libc`) and adds additional utilities.
 It serves as the foundation for future 42 projects by providing a consistent, personal standard library.
-
----
 
 ## ⚙️ Contents
 
@@ -52,7 +44,7 @@ typedef struct s_list
     void            *content;
     struct s_list   *next;
 } t_list;
-``
+```
 
 List manipulation functions include:
 
@@ -63,24 +55,28 @@ ft_lstclear   ft_lstiter      ft_lstmap
 🧪 Usage
 
 Clone and compile:
-
+```
 git clone https://github.com/filipadsa/Libft.git
 cd Libft
 make
+```
 
 Include it in your C project:
-
+```c
 #include "libft.h"
+```
 
 Compile your program with the library:
-
+```
 cc main.c -L. -lft -I.
+```
 
 Clean build files:
-
+```
 make clean     # remove object files
 make fclean    # remove object files + libft.a
 make re        # rebuild everything
+```
 
 🧩 Notes
 
