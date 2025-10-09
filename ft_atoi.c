@@ -6,13 +6,13 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:52:20 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:37:17 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:13:41 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	result;

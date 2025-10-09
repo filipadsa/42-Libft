@@ -1,9 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I
-SRC_DIR = .
-SRC = %.c
-OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 NAME = libft.a
 
 all: $(NAME)
@@ -11,8 +9,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $^
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

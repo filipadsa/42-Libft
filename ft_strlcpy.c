@@ -6,13 +6,13 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:09:57 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:57:47 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:21:03 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	len;
 	size_t	pos;

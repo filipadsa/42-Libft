@@ -6,11 +6,11 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:11:03 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:38:12 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:14:27 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
