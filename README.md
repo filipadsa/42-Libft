@@ -52,7 +52,7 @@ ft_lstnew     ft_lstadd_front ft_lstsize
 ft_lstlast    ft_lstadd_back  ft_lstdelone
 ft_lstclear   ft_lstiter      ft_lstmap
 
-🧪 Usage
+## 🧪 Usage
 
 Clone and compile:
 ```
@@ -78,10 +78,10 @@ make fclean    # remove object files + libft.a
 make re        # rebuild everything
 ```
 
-🧩 Notes
+## 📝 Notes
 
-    All functions are Norminette-compliant.
+  All functions are Norminette-compliant.
 
-    Only standard headers and allowed external functions (malloc, free, write) are used.
+  Only standard headers and allowed external functions (malloc, free, write) are used.
 
-    Makefile includes rules: all, clean, fclean, re, and bonus.
+  Makefile includes rules: all, clean, fclean, re, and bonus.
