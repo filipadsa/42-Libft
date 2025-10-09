@@ -1,12 +1,3 @@
-```text
-__         __     ______     ______   ______  
-/\ \       /\ \   /\  == \   /\  ___\ /\__  _\ 
-\ \ \____  \ \ \  \ \  __<   \ \  __\ \/_/\ \/ 
- \ \_____\  \ \_\  \ \_____\  \ \_\      \ \_\ 
-  \/_____/   \/_/   \/_____/   \/_/       \/_/ 
-```                                           
----
-
 # 🧩 Libft
 
 My very first C library — reimplementing and extending standard libc functions.
