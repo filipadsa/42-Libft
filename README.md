@@ -1,9 +1,9 @@
-  _ _ _      __ _   
- | (_) |    / _| |  
- | |_| |__ | |_| |_ 
- | | | '_ \|  _| __|
- | | | |_) | | | |_ 
- |_|_|_.__/|_|  \__|
+ __         __     ______     ______   ______  
+/\ \       /\ \   /\  == \   /\  ___\ /\__  _\ 
+\ \ \____  \ \ \  \ \  __<   \ \  __\ \/_/\ \/ 
+ \ \_____\  \ \_\  \ \_____\  \ \_\      \ \_\ 
+  \/_____/   \/_/   \/_____/   \/_/       \/_/ 
+                                               
 
 # 🧩 Libft
 
@@ -18,23 +18,10 @@ It serves as the foundation for future 42 projects by providing a consistent, pe
 ## ⚙️ Contents
 
 ### **Part 1 – Libc Functions**
-Reimplementation of standard C functions (with the `ft_` prefix):
-
-isalpha isdigit isalnum isascii isprint
-strlen memset bzero memcpy memmove
-strlcpy strlcat toupper tolower strchr
-strrchr strncmp memchr memcmp strnstr
-atoi calloc strdup
-
+Reimplementation of standard C functions.
 
 ### **Part 2 – Additional Functions**
-String and memory manipulation helpers:
-
-ft_substr ft_strjoin ft_strtrim
-ft_split ft_itoa ft_strmapi
-ft_striteri ft_putchar_fd ft_putstr_fd
-ft_putendl_fd ft_putnbr_fd
-
+String and memory manipulation helpers.
 
 ### **Bonus – Linked List Utilities**
 Implementation of a generic singly linked list using:
@@ -45,12 +32,6 @@ typedef struct s_list
     struct s_list   *next;
 } t_list;
 ```
-
-List manipulation functions include:
-
-ft_lstnew     ft_lstadd_front ft_lstsize
-ft_lstlast    ft_lstadd_back  ft_lstdelone
-ft_lstclear   ft_lstiter      ft_lstmap
 
 ## 🧪 Usage
 
