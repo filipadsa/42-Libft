@@ -6,13 +6,13 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:04:09 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:48:26 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:35:17 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_set(char c, const char *s2)
+static int	is_in_set(char c, const char *s2)
 {
 	while (*s2)
 	{

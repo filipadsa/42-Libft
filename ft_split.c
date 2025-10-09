@@ -6,18 +6,18 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:14:09 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:41:52 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:34:44 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_sep(char current, char c)
+static int	is_sep(char current, char c)
 {
 	return (current == c);
 }
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -38,7 +38,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-void	free_all(char **arr, size_t len)
+static void	free_all(char **arr, size_t len)
 {
 	size_t	i;
 

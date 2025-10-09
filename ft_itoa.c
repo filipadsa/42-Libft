@@ -6,13 +6,13 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 12:00:51 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:38:55 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/09 14:34:11 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int n)
+static int	ft_numlen(int n)
 {
 	int	len;
 
