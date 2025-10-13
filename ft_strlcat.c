@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:23:14 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 14:20:49 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:17:37 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	dest_len = 0;
-	src_len = 0;
-	i = 0;
+	src_len = ft_strlen(src);
 	while (dest_len < size && dest[dest_len])
 		dest_len++;
-	while (src[src_len])
-		src_len++;
 	if (dest_len == size)
 		return (size + src_len);
-	while (src[i] && (dest_len + i) < (size - 1))
+	i = 0;
+	while (src[i] && (dest_len + i + 1) < size)
 	{
 		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
+	if ((dest_len + i) < size)
+		dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }

@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:51:54 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:37:23 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:28:29 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *mem, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)mem;

@@ -6,16 +6,11 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:14:09 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 14:34:44 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/13 13:31:27 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	is_sep(char current, char c)
-{
-	return (current == c);
-}
 
 static int	count_words(char const *s, char c)
 {
@@ -26,12 +21,12 @@ static int	count_words(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		while (s[i] && is_sep(s[i], c))
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i])
 		{
 			count++;
-			while (s[i] && !is_sep(s[i], c))
+			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
@@ -40,14 +35,8 @@ static int	count_words(char const *s, char c)
 
 static void	free_all(char **arr, size_t len)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < len)
-	{
-		free(arr[i]);
-		i++;
-	}
+	while (len-- > 0)
+		free(arr[len]);
 	free(arr);
 }
 
@@ -61,19 +50,16 @@ static void	fill_split(char **result, char const *s, char c)
 	word_index = 0;
 	while (s[i])
 	{
-		while (s[i] && is_sep(s[i], c))
+		while (s[i] && s[i] == c)
 			i++;
 		start = i;
-		while (s[i] && !is_sep(s[i], c))
+		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
 		{
 			result[word_index] = ft_substr(s, start, i - start);
 			if (!result[word_index])
-			{
 				free_all(result, word_index);
-				return ;
-			}
 			word_index++;
 		}
 	}
@@ -89,6 +75,6 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
-	fill_split(result, s, c);
+	(fill_split(result, s, c));
 	return (result);
 }

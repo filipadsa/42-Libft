@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:38:47 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:48:09 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/13 13:54:28 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t	needle_len;
 
-	i = 0;
-	if (needle[0] == '\0')
+	if (*needle == '\0')
 		return ((char *)haystack);
-	while (haystack[i] && i < len)
+	needle_len = ft_strlen(needle);
+	while (*haystack && len-- >= needle_len)
 	{
-		j = 0;
-		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j])
-			j++;
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
-		i++;
+		if (ft_memcmp(haystack, needle, needle_len) == 0)
+			return ((char *)haystack);
+		haystack++;
 	}
-	return (0);
+	return (NULL);
 }
