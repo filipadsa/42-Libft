@@ -14,6 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+<<<<<<< HEAD
 	while (*s)
 	{
 		if (*s == (unsigned char)c)
@@ -21,6 +22,18 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	}
 	if ((unsigned char)c == '\0')
+=======
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	while (*s)
+	{
+		if (*(unsigned const char *)s == uc)
+			return ((char *)s);
+		s++;
+	}
+	if (uc == '\0')
+>>>>>>> 01b86dc15c9ff05cd42d4862dfe8d0ad480e91d3
 		return ((char *)s);
 	return (NULL);
 }

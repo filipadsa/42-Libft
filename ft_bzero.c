@@ -14,14 +14,14 @@
 
 void	ft_bzero(void *mem, size_t len)
 {
+<<<<<<< HEAD
 	size_t			i;
 	unsigned char	*ptr;
+=======
+	unsigned char	*p;
+>>>>>>> 01b86dc15c9ff05cd42d4862dfe8d0ad480e91d3
 
-	ptr = (unsigned char *)mem;
-	i = 0;
-	while (i < len)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	p = (unsigned char *)mem;
+	while (len--)
+		*p++ = 0;
 }

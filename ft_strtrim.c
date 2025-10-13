@@ -12,30 +12,30 @@
 
 #include "libft.h"
 
-static int	is_in_set(char c, const char *s2)
+static int	is_in_set(char c, const char *set)
 {
-	while (*s2)
+	while (*set)
 	{
-		if (c == *s2)
+		if (c == *set)
 			return (1);
-		s2++;
+		set++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
 	char	*trimmed;
 
 	start = 0;
-	if (!s1 || !s2)
+	if (!s1 || !set)
 		return (NULL);
 	end = ft_strlen(s1);
-	while (s1[start] && is_in_set(s1[start], s2))
+	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	while (end > start && is_in_set(s1[end - 1], s2))
+	while (end > start && is_in_set(s1[end - 1], set))
 		end--;
 	trimmed = (char *)malloc(end - start + 1);
 	if (!trimmed)
