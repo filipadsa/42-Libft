@@ -53,3 +53,18 @@ char	*ft_itoa(int n)
 	}
 	return (s);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  int   n = 1234;
+  char  *result;
+
+  result = ft_itoa(n);
+  if (!result)
+    return (1);
+  printf("%s", result);
+  free(result);
+  return (0);
+} */

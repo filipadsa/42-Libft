@@ -34,3 +34,13 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *str = "+123";
+
+  printf("%d", ft_atoi(str));
+  return (0);
+} */

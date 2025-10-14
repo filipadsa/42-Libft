@@ -23,9 +23,36 @@ void	ft_lstclear_bonus(t_list **head, void (*del)(void*))
 	while (temp)
 	{
 		next = temp->next;
-		del(temp->next);
+		del(temp->content);
 		free(temp);
 		temp = next;
 	}
 	*head = NULL;
 }
+
+/* #include <stdio.h>
+
+void print_content(void *content)
+{
+    printf("%s -> ", (char *)content);
+}
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main()
+{
+    t_list *head = NULL;
+
+    ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("first")));
+    ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("second")));
+    ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("third")));
+    ft_lstiter_bonus(head, print_content);
+    printf("NULL\n");
+    ft_lstclear_bonus(&head, del_content);
+    if (head == NULL)
+        printf("Successfully cleaned!\n");
+    return (0);
+} */

@@ -18,3 +18,13 @@ int	ft_isdigit(int d)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+  int d = 'a';
+
+  printf("%d", ft_isdigit(d));
+  return (0);
+} */

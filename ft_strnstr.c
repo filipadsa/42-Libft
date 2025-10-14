@@ -27,3 +27,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *haystack = "carapau";
+  const char  *needle = "apa";
+  size_t      len = ft_strlen(haystack);
+  char        *result;
+
+  result = ft_strnstr(haystack, needle, len);
+  if (!result)
+    return (1);
+  printf("%s", result);
+  return (0);
+} */

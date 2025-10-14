@@ -29,3 +29,29 @@ void	ft_lstadd_back_bonus(t_list **head, t_list *new)
 	}
 	new->next = NULL;
 }
+
+/* #include <stdio.h>
+
+void  print_content(void *content)
+{
+    printf("%s -> ", (char *)content);
+}
+
+int main()
+{
+  t_list  *head = NULL;
+  t_list  *temp;
+
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("fisrt"));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("second"));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("third"));
+  ft_lstiter_bonus(head, print_content);
+  printf("NULL\n");
+  while (head)
+  {
+    temp = head->next;
+    free(head);
+    head = temp;
+  }
+  return (0);
+} */

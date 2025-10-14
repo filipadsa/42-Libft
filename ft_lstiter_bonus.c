@@ -23,3 +23,53 @@ void	ft_lstiter_bonus(t_list *node, void (*f)(void *))
 		}
 	}
 }
+
+#include <stdio.h>
+
+void print_content(void *content)
+{
+    printf("%s -> ", (char *)content);
+}
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+void to_uppercase_content(void *content)
+{
+  int i = 0;
+  char *str = (char *)content;
+
+  while (str[i])
+  {
+    if (str[i] >= 'a' && str[i] <= 'z')
+      str[i] -= 32;
+    i++;
+  }
+}
+
+int main(void)
+{
+  t_list *head = NULL;
+  t_list *temp;
+
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("first")));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("second")));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("third")));
+  printf("Original:\n");
+  ft_lstiter_bonus(head, print_content);
+  printf("NULL\n");
+  ft_lstiter_bonus(head, to_uppercase_content);
+  printf("After to_uppercase_content:\n");
+  ft_lstiter_bonus(head, print_content);
+  printf("NULL\n");
+  while (head)
+  {
+    temp = head->next;
+    del_content(head->content);
+    free(head);
+    head = temp;
+  }
+  return (0);
+}

@@ -28,3 +28,23 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(ptr, 0, sum);
 	return (ptr);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  int     *arr;
+	size_t  n = 5;
+  size_t  i = 0;
+
+	arr = ft_calloc(n, sizeof(int));
+	if (!arr)
+		return (1);
+	while (i < n)
+	{
+		printf("%d ", arr[i]);
+		i++;
+	}
+	free(arr);
+	return (0);
+} */

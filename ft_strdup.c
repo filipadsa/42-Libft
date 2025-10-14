@@ -33,3 +33,18 @@ char	*ft_strdup(const char *s)
 	dup[i] = '\0';
 	return (dup);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *s = "ola";
+  char        *dup;
+
+  dup = ft_strdup(s);
+  if (!dup)
+    return (1);
+  printf("%s", dup);
+  free(dup);
+  return (0);
+} */

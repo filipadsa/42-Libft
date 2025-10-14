@@ -44,3 +44,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[end - start] = '\0';
 	return (trimmed);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char const  *s1 = "*carapau*";
+  char const  *set = "*";
+  char        *result;
+
+  result = ft_strtrim(s1, set);
+  if (!result)
+    return (1);
+  printf("Trimmed: '%s'", result);
+  free (result);
+  return (0);
+} */

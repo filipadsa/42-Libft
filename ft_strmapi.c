@@ -36,3 +36,24 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
+
+/* #include <stdio.h>
+
+char	to_uppercase(unsigned int i, char c)
+{
+	(void)i;
+  return (ft_toupper(c));
+}
+
+int main()
+{
+  char const  *s = "ola";
+  char        *result;
+
+  result = ft_strmapi(s, to_uppercase);
+  if (!result)
+    return (1);
+  printf("%s", result);
+  free(result);
+  return (0);
+} */

@@ -25,3 +25,20 @@ void	*ft_memchr(const void *search, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *search = "ola";
+  int         c = 'l';
+  size_t      n = 3;
+  char        *result;
+
+  result = ft_memchr(search, c, n);
+  if (result)
+		printf("Found '%c' at position: %zu\n", c, result - search);
+	else
+		printf("'%c' not found in first '%zu' bytes\n", c, n);
+  return (0);
+} */

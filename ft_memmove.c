@@ -35,3 +35,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char        dest[8];
+  const char  *src = "carapau";
+  size_t      n = 4;
+  char        *result;
+
+  result = ft_memmove(dest, src, n);
+  if (!result)
+    return (1);
+  printf("%s", result);
+  return (0);
+} */

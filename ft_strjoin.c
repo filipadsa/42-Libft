@@ -28,3 +28,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[s1_len + s2_len] = '\0';
 	return (join);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char const  *s1 = "fil";
+  char const  *s2 = "ipa";
+  char        *join;
+
+  join = ft_strjoin(s1, s2);
+  printf("%s", join);
+  free(join);
+  return (0);
+} */

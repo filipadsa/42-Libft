@@ -18,3 +18,13 @@ int	ft_isprint(int p)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+  int p = 125;
+
+  printf("%d", ft_isprint(p));
+  return (0);
+} */

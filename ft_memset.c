@@ -26,3 +26,16 @@ void	*ft_memset(void *mem, int byte, size_t len)
 	}
 	return (mem);
 }
+
+#include <stdio.h>
+
+int main()
+{
+  char    mem[] = {'A', 'B', 'C', '\0'};
+  int     byte = 'F';
+  size_t  len = 2;
+
+  ft_memset(mem, byte, len);
+  printf("%s", mem);
+  return (0);
+}

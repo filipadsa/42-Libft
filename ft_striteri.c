@@ -23,3 +23,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+/* #include <stdio.h>
+
+void	to_uppercase(unsigned int i, char *c)
+{
+	(void)i;
+  *c = ft_toupper(*c);
+}
+
+int main()
+{
+  char  s[] = "ola";
+
+  ft_striteri(s, to_uppercase);
+  printf("%s", s);
+  return (0);
+} */

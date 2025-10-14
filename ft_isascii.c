@@ -18,3 +18,13 @@ int	ft_isascii(int a)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+  int a = 35;
+
+  printf("%d", ft_isascii(a));
+  return (0);
+} */

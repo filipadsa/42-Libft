@@ -23,3 +23,20 @@ t_list	*ft_lstnew_bonus(void *content)
 	node->next = NULL;
 	return (node);
 }
+
+/* #include <stdio.h>
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+  t_list *node = ft_lstnew_bonus(ft_strdup("carapau!"));
+  if (!node)
+    return (1);
+  printf("Node: %s\n", (char *)node->content);
+  ft_lstdelone_bonus(node, del_content);
+  return (0);
+} */

@@ -78,3 +78,24 @@ char	**ft_split(char const *s, char c)
 	(fill_split(result, s, c));
 	return (result);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char const  *s = "ola,carapau";
+  char        c = ',';
+  char        **result;
+  size_t      i = 0;
+
+  result = ft_split(s, c);
+  if (!result)
+    return (1);
+  while (result[i])
+  {
+    printf("result[%zu] = '%s'\n", i, result[i]);
+    free(result[i]);
+    i++;
+  }
+  free(result);
+} */

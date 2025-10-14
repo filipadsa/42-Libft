@@ -29,3 +29,19 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *s = "carapau";
+  int         c = 'a';
+  char        *result;
+
+  result = ft_strrchr(s, c);
+  if (result)
+    printf("Last '%c' found at position: %ld\n", c, result - s);
+	else
+		printf("Character '%c' not found\n", c);
+	return (0);
+} */

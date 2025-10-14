@@ -24,3 +24,24 @@ int	ft_lstsize_bonus(t_list *node)
 	}
 	return (count);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+  t_list *head = NULL;
+  t_list  *temp;
+
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("first")));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("second")));
+  ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("third")));
+  printf("Size: %d\n", ft_lstsize_bonus(head));
+  while (head)
+  {
+    temp = head->next;
+    free(head->content);
+    free(head);
+    head = temp;
+  }
+  return 0;
+} */

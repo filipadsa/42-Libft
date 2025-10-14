@@ -31,3 +31,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char const    *s = "infelizmente";
+  unsigned int  start = 2;
+  size_t        len = 5;
+  char          *sub;
+
+  sub = ft_substr(s, start, len);
+  if (!sub)
+    return (1);
+  printf("%s", sub);
+  free(sub);
+  return (0);
+} */

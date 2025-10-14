@@ -14,14 +14,34 @@
 
 void	ft_bzero(void *mem, size_t len)
 {
-<<<<<<< HEAD
 	size_t			i;
-	unsigned char	*ptr;
-=======
 	unsigned char	*p;
->>>>>>> 01b86dc15c9ff05cd42d4862dfe8d0ad480e91d3
 
-	p = (unsigned char *)mem;
-	while (len--)
-		*p++ = 0;
+  p = (unsigned char *)mem;
+  i = 0;
+  while (i < len)
+  {
+    p[i] = 0;
+    i++;
+  }
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+	char    buf[5] = {1, 2, 3, 4, 5};
+	size_t  len = 3;
+
+	ft_bzero(buf, len);
+
+	len = 0;
+	while (len < 5)
+	{
+		printf("%d ", buf[len]);
+		len++;
+	}
+	printf("\n");
+
+	return 0;
+} */

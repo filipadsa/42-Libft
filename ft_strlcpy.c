@@ -31,3 +31,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[pos] = '\0';
 	return (len);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char  dest[10];
+  const char  *src = "olaa";
+  size_t  size_dest = sizeof(dest);
+
+  printf("%zu", ft_strlcpy(dest, src, size_dest));
+  return (0);
+} */

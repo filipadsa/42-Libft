@@ -34,3 +34,15 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  char    dest[4] = "ole";
+  char    src[] = "ola";
+  size_t  size = 2;
+
+  printf("%zu", ft_strlcat(dest, src, size));
+  return (0);
+} */

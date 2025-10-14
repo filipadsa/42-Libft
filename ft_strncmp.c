@@ -14,20 +14,30 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
 	unsigned const char	*us1;
 	unsigned const char	*us2;
 
-	i = 0;
-	us1 = (unsigned const char *)s1;
-	us2 = (unsigned const char *)s2;
-	while (i < n && us1[i] && us2[i] && us1[i] == us2[i])
-		i++;
-<<<<<<< HEAD
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-=======
-	if (i == n)
+	us1 = (const unsigned char *)s1;
+	us2 = (const unsigned char *)s2;
+	if (n == 0)
 		return (0);
-	return (us1[i] - us2[i]);
->>>>>>> 01b86dc15c9ff05cd42d4862dfe8d0ad480e91d3
+	while (n > 1 && *us1 && *us1 == *us2)
+	 {
+	 	us1++;
+	 	us2++;
+	 	n--;
+	 }
+	 return (*us1 - *us2);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+  const char  *s1 = "ola";
+  const char  *s2 = "ole";
+  size_t      n = 2;
+
+  printf("%d", ft_strncmp(s1, s2, n));
+  return (0);
+} */
