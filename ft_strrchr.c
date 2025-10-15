@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 17:48:49 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:48:20 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:54:27 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char		*p;
-	unsigned char 	uc;
+	unsigned char	uc;
 
 	p = s;
 	uc = (unsigned char)c;

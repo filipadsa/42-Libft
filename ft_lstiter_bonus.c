@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:08:27 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 15:40:59 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:56:27 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	ft_lstiter_bonus(t_list *node, void (*f)(void *))
 	}
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
-void print_content(void *content)
+void	print_content(void *content)
 {
     printf("%s -> ", (char *)content);
 }
@@ -36,7 +36,7 @@ void del_content(void *content)
     free(content);
 }
 
-void to_uppercase_content(void *content)
+void	to_uppercase_content(void *content)
 {
   int i = 0;
   char *str = (char *)content;
@@ -49,7 +49,7 @@ void to_uppercase_content(void *content)
   }
 }
 
-int main(void)
+int	main(void)
 {
   t_list *head = NULL;
   t_list *temp;
@@ -72,4 +72,4 @@ int main(void)
     head = temp;
   }
   return (0);
-}
+} */

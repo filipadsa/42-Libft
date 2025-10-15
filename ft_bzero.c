@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:51:54 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 11:28:29 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:59:16 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,23 @@ void	ft_bzero(void *mem, size_t len)
 	size_t			i;
 	unsigned char	*p;
 
-  p = (unsigned char *)mem;
-  i = 0;
-  while (i < len)
-  {
-    p[i] = 0;
-    i++;
-  }
+	p = (unsigned char *)mem;
+	i = 0;
+	while (i < len)
+	{
+		p[i] = 0;
+		i++;
+	}
 }
 
 /* #include <stdio.h>
 
-int main()
+int	main()
 {
-	char    buf[5] = {1, 2, 3, 4, 5};
-	size_t  len = 3;
+	char	buf[5] = {1, 2, 3, 4, 5};
+	size_t	len = 3;
 
 	ft_bzero(buf, len);
-
 	len = 0;
 	while (len < 5)
 	{
@@ -42,6 +41,5 @@ int main()
 		len++;
 	}
 	printf("\n");
-
 	return 0;
 } */

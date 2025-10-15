@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:14:09 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 13:31:27 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 15:05:31 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ static int	count_words(char const *s, char c)
 static void	free_all(char **arr, size_t len)
 {
 	while (len-- > 0)
+	{
 		free(arr[len]);
+		arr[len] = NULL;
+	}
 	free(arr);
 }
 
@@ -45,6 +48,7 @@ static void	fill_split(char **result, char const *s, char c)
 	size_t	i;
 	size_t	start;
 	size_t	word_index;
+
 
 	i = 0;
 	word_index = 0;
@@ -59,7 +63,10 @@ static void	fill_split(char **result, char const *s, char c)
 		{
 			result[word_index] = ft_substr(s, start, i - start);
 			if (!result[word_index])
+			{
 				free_all(result, word_index);
+				return ;
+			}
 			word_index++;
 		}
 	}
@@ -79,23 +86,23 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-/* #include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-  char const  *s = "ola,carapau";
-  char        c = ',';
-  char        **result;
-  size_t      i = 0;
+// int main()
+// {
+//   char const  *s = "olaxxxxxx,carapau";
+//   char        c = 'x';
+//   char        **result;
+//   size_t      i = 0;
 
-  result = ft_split(s, c);
-  if (!result)
-    return (1);
-  while (result[i])
-  {
-    printf("result[%zu] = '%s'\n", i, result[i]);
-    free(result[i]);
-    i++;
-  }
-  free(result);
-} */
+//   result = ft_split(s, c);
+//   if (!result)
+//     return (1);
+//   while (result[i])
+//   {
+//     printf("result[%zu] = '%s'\n", i, result[i]);
+//     free(result[i]);
+//     i++;
+//   }
+//   free(result);
+// }

@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:04:11 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 15:41:11 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:08:24 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,34 +21,33 @@ t_list	*ft_lstlast_bonus(t_list *node)
 	return (node);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
-void print_content(void *content)
+void	print_content(void *content)
 {
     printf("%s\n", (char *)content);
 }
 
-int main(void)
+int	main(void)
 {
-  t_list  *head = NULL;
-  t_list  *last = NULL;
+  t_list	*head = NULL;
+  t_list	*last = NULL;
+  t_list	*tmp;
 
   ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("first")));
   ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("second")));
   ft_lstadd_back_bonus(&head, ft_lstnew_bonus(ft_strdup("third")));
   last = ft_lstlast_bonus(head);
   if (last)
-    printf("Last node: %s\n", (char *)last->content);
+  	printf("Last node: %s\n", (char *)last->content);
   else
-    printf("List is empty\n");
-  t_list *tmp;
+  	printf("List is empty\n");
   while (head)
   {
-    tmp = head->next;
-    free(head->content);
-    free(head);
-    head = tmp;
+  	tmp = head->next;
+	free(head->content);
+	free(head);
+	head = tmp;
   }
   return (0);
-}
-
+} */

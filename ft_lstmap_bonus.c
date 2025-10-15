@@ -6,54 +6,57 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:12:26 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 16:02:55 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:55:53 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap_bonus(t_list *node, void *(*f)(void *), void (*del)(void *))
+// t_list	*ft_lstmap_bonus(t_list *node, void *(*f)(void *), void (*del)(void *))
+// {
+// 	t_list	*newlst;
+// 	t_list	*new;
+//   void fun;
+
+// 	if (!node || !f)
+// 		return (NULL);
+// 	newlst = NULL;
+// 	new = NULL;
+// 	while (node)
+// 	{
+//     fun = f(node->content);
+// 		new = ft_lstnew_bonus(fun));
+// 		if (!new)
+// 		{
+//       del(fun)
+// 			ft_lstclear_bonus(&newlst, del);
+// 			return (NULL);
+// 		}
+// 		ft_lstadd_back_bonus(&newlst, new);
+// 		node = node->next;
+// 	}
+// 	return (newlst);
+// }
+
+/* #include <stdio.h>
+
+void	*duplicate_content(void *content)
 {
-	t_list	*newlst;
-	t_list	*new;
-
-	if (!node || !f)
-		return (NULL);
-	newlst = NULL;
-	new = NULL;
-	while (node)
-	{
-		new = ft_lstnew_bonus(f(node->content));
-		if (!new)
-		{
-			ft_lstclear_bonus(&newlst, del);
-			return (NULL);
-		}
-		ft_lstadd_back_bonus(&newlst, new);
-		node = node->next;
-	}
-	return (newlst);
-}
-
-#include <stdio.h>
-
-void *duplicate_content(void *content)
-{
-  char *str = (char *)content;
+  char	*str = (char *)content;
   return ft_strdup(str);
 }
 
-void del_content(void *content)
+void	del_content(void *content)
 {
   free(content);
 }
 
-void print_content(void *content)
+void	print_content(void *content)
 {
   printf("%s -> ", (char *)content);
 }
 
-int main(void)
+int	main(void)
 {
   t_list  *head = NULL;
   t_list  *mapped = NULL;
@@ -82,6 +85,4 @@ int main(void)
   ft_lstclear_bonus(&head, del_content);
   ft_lstclear_bonus(&mapped, del_content);
   return (0);
-}
-
-
+} */

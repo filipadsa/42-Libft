@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:35:31 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/09 13:41:02 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:55:13 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memset(void *mem, int byte, size_t len)
 	return (mem);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main()
 {
@@ -38,4 +38,4 @@ int main()
   ft_memset(mem, byte, len);
   printf("%s", mem);
   return (0);
-}
+} */

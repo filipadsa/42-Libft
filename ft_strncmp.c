@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:34:41 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 19:11:22 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:53:47 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if (n == 0)
 		return (0);
 	while (n > 1 && *us1 && *us1 == *us2)
-	 {
-	 	us1++;
-	 	us2++;
-	 	n--;
-	 }
-	 return (*us1 - *us2);
+	{
+		us1++;
+		us2++;
+		n--;
+	}
+	return (*us1 - *us2);
 }
 
 /* #include <stdio.h>
