@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:14:09 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/15 15:05:31 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:20:53 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,44 +33,47 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-static void	free_all(char **arr, size_t len)
+static void	free_all(char **arr)
 {
-	while (len-- > 0)
+	int	i;
+
+	i = 0;
+	while (arr[i])
 	{
-		free(arr[len]);
-		arr[len] = NULL;
+		free(arr[i]);
+		arr[i] = NULL;
+		i++;
 	}
 	free(arr);
 }
 
-static void	fill_split(char **result, char const *s, char c)
+static int	fill_split(char **result, char const *s, char c)
 {
-	size_t	i;
-	size_t	start;
-	size_t	word_index;
-
+	int		i;
+	size_t	word_len;
 
 	i = 0;
-	word_index = 0;
-	while (s[i])
+	while (*s)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > start)
+		while (*s == c)
+			s++;
+		if (!*s)
+			break ;
+		if (!ft_strchr(s, c))
+			word_len = ft_strlen(s);
+		else
+			word_len = ft_strchr(s, c) - s;
+		result[i] = ft_substr(s, 0, word_len);
+		if (!result[i])
 		{
-			result[word_index] = ft_substr(s, start, i - start);
-			if (!result[word_index])
-			{
-				free_all(result, word_index);
-				return ;
-			}
-			word_index++;
+			free_all(result);
+			return (0);
 		}
+		i++;
+		s += word_len;
 	}
-	result[word_index] = NULL;
+	result[i] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -82,7 +85,8 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
-	(fill_split(result, s, c));
+	if (!fill_split(result, s, c))
+		return (NULL);
 	return (result);
 }
 

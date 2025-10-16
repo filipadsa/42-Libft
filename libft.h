@@ -6,7 +6,7 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:45:05 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 19:21:45 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:08:19 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,15 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
-void	ft_lstadd_back_bonus(t_list **head, t_list *new);
-void	ft_lstadd_front_bonus(t_list **head, t_list *new);
-void	ft_lstclear_bonus(t_list **head, void (*del)(void *));
-void	ft_lstdelone_bonus(t_list *node, void (*del)(void *));
-void	ft_lstiter_bonus(t_list *node, void (*f)(void *));
-t_list	*ft_lstlast_bonus(t_list *node);
-t_list	*ft_lstmap_bonus(t_list *node, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew_bonus(void *content);
-int		ft_lstsize_bonus(t_list *node);
+void	ft_lstadd_back(t_list **head, t_list *new);
+void	ft_lstadd_front(t_list **head, t_list *new);
+void	ft_lstclear(t_list **head, void (*del)(void *));
+void	ft_lstdelone(t_list *node, void (*del)(void *));
+void	ft_lstiter(t_list *node, void (*f)(void *));
+t_list	*ft_lstlast(t_list *node);
+t_list	*ft_lstmap(t_list *node, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *node);
 
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);

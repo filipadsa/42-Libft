@@ -6,13 +6,13 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:09:38 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/13 16:01:11 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:01:41 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back_bonus(t_list **head, t_list *new)
+void	ft_lstadd_back(t_list **head, t_list *new)
 {
 	t_list	*temp;
 
@@ -42,10 +42,10 @@ int main()
   t_list  *head = NULL;
   t_list  *temp;
 
-  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("fisrt"));
-  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("second"));
-  ft_lstadd_back_bonus(&head, ft_lstnew_bonus("third"));
-  ft_lstiter_bonus(head, print_content);
+  ft_lstadd_back(&head, ft_lstnew("fisrt"));
+  ft_lstadd_back(&head, ft_lstnew("second"));
+  ft_lstadd_back(&head, ft_lstnew("third"));
+  ft_lstiter(head, print_content);
   printf("NULL\n");
   while (head)
   {
