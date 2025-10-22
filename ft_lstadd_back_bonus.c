@@ -6,28 +6,27 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:09:38 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/16 11:01:41 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:02:08 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **head, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (!head || !new)
+	if (!lst || !new)
 		return ;
-	if (*head == NULL)
-		*head = new;
+	if (*lst == NULL)
+		*lst = new;
 	else
 	{
-		temp = *head;
+		temp = *lst;
 		while (temp->next)
 			temp = temp->next;
 		temp->next = new;
 	}
-	new->next = NULL;
 }
 
 /* #include <stdio.h>
@@ -39,19 +38,19 @@ void  print_content(void *content)
 
 int main()
 {
-  t_list  *head = NULL;
+  t_list  *lst = NULL;
   t_list  *temp;
 
-  ft_lstadd_back(&head, ft_lstnew("fisrt"));
-  ft_lstadd_back(&head, ft_lstnew("second"));
-  ft_lstadd_back(&head, ft_lstnew("third"));
-  ft_lstiter(head, print_content);
+  ft_lstadd_back(&lst, ft_lstnew("fisrt"));
+  ft_lstadd_back(&lst, ft_lstnew("second"));
+  ft_lstadd_back(&lst, ft_lstnew("third"));
+  ft_lstiter(lst, print_content);
   printf("NULL\n");
-  while (head)
+  while (lst)
   {
-    temp = head->next;
-    free(head);
-    head = temp;
+    temp = lst->next;
+    free(lst);
+    lst = temp;
   }
   return (0);
 } */

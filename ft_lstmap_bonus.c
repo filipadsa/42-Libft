@@ -6,24 +6,24 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:12:26 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/16 11:07:10 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:03:32 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *node, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*new;
 	void	*fun;
 
-	if (!node || !f)
+	if (!lst || !f)
 		return (NULL);
 	newlst = NULL;
-	while (node)
+	while (lst)
 	{
-		fun = f(node->content);
+		fun = f(lst->content);
 		new = ft_lstnew(fun);
 		if (!new)
 		{
@@ -32,7 +32,7 @@ t_list	*ft_lstmap(t_list *node, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		ft_lstadd_back(&newlst, new);
-		node = node->next;
+		lst = lst->next;
 	}
 	return (newlst);
 }

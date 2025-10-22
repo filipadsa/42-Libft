@@ -6,19 +6,19 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:04:11 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/16 11:04:41 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:03:16 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *node)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!node)
+	if (!lst)
 		return (NULL);
-	while (node->next)
-		node = node->next;
-	return (node);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
 
 /* #include <stdio.h>
@@ -39,7 +39,7 @@ int	main(void)
   ft_lstadd_back(&head, ft_lstnew(ft_strdup("third")));
   last = ft_lstlast(head);
   if (last)
-  	printf("Last node: %s\n", (char *)last->content);
+  	printf("Last lst: %s\n", (char *)last->content);
   else
   	printf("List is empty\n");
   while (head)

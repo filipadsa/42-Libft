@@ -6,19 +6,19 @@
 /*   By: filda-si <filda-si@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:17:48 by filda-si          #+#    #+#             */
-/*   Updated: 2025/10/16 11:03:16 by filda-si         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:02:57 by filda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *node, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!node)
+	if (!lst)
 		return ;
 	if (del)
-		del(node->content);
-	free(node);
+		del(lst->content);
+	free(lst);
 }
 
 /* #include <stdio.h>
@@ -48,7 +48,7 @@ int main(void)
   temp = second->next;
   ft_lstdelone(second, del_content);
   head->next = temp;
-  printf("After delone second node:\n");
+  printf("After delone second lst:\n");
   ft_lstiter(head, print_content);
   printf("NULL\n");
   return (0);
