@@ -54,8 +54,6 @@ make re        # rebuild everything
 
 ## 📝 Notes
 
-  All functions are Norminette-compliant.
-
-  Only standard headers and allowed external functions (malloc, free, write) are used.
-
-  Makefile includes rules: all, clean, fclean, re, and bonus.
+- All functions are Norminette-compliant;
+- Only standard headers and allowed external functions (malloc, free, write) are used;
+- Makefile includes rules: all, clean, fclean, re, and bonus.
